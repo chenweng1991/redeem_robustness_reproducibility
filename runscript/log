@@ -1,0 +1,50 @@
+export PATH="/lab/solexa_weissman/cweng/Packages/miniconda/envs/r4.3_environment/bin:$PATH"
+Rscript prepare_redeemr.r young1_BMMC Young1.T1.BMMC.Consensus.final/ &
+Rscript prepare_redeemr.r young1_HPC Young1.T1.HPC.Consensus.final/ &
+Rscript prepare_redeemr.r young1_HSC Young1.T1.HSC.Consensus.final/ &
+Rscript prepare_redeemr.r young2_BMMC Young2.BMMC.Consensus.final/ &
+Rscript prepare_redeemr.r young2_HPC Young2.HPC.Consensus.final/ &
+Rscript prepare_redeemr.r young2_HSC Young2.HSC.Consensus.final/ &
+Rscript prepare_redeemr.r Old1_BMMC Old1.BMMC.Consensus.final/ &
+Rscript prepare_redeemr.r Old1_HSPC Old1.HSPC.Consensus.final/ &
+Rscript prepare_redeemr.r Old2_BMMC Old2.BMMC.Consensus.final/ &
+Rscript prepare_redeemr.r Old2_HSPC Old2.HSPC.Consensus.final/ &
+
+Rscript prepare_redeem_bg.r young1_BMMC Young1.T1.BMMC.Consensus.final/ &
+Rscript prepare_redeem_bg.r young1_HPC Young1.T1.HPC.Consensus.final/ &
+Rscript prepare_redeem_bg.r young1_HSC Young1.T1.HSC.Consensus.final/ &
+Rscript prepare_redeem_bg.r young2_BMMC Young2.BMMC.Consensus.final/ &
+Rscript prepare_redeem_bg.r young2_HPC Young2.HPC.Consensus.final/ &
+Rscript prepare_redeem_bg.r young2_HSC Young2.HSC.Consensus.final/ &
+Rscript prepare_redeem_bg.r Old1_BMMC Old1.BMMC.Consensus.final/ &
+Rscript prepare_redeem_bg.r Old1_HSPC Old1.HSPC.Consensus.final/ &
+Rscript prepare_redeem_bg.r Old2_BMMC Old2.BMMC.Consensus.final/ &
+Rscript prepare_redeem_bg.r Old2_HSPC Old2.HSPC.Consensus.final/ &
+
+
+## 2024-8-10 test trim5 and trim 9
+Rscript prepare_redeemr_trim_test.r young1_BMMC Young1.T1.BMMC.Consensus.final/ &
+Rscript prepare_redeemr_trim_test.r young1_HPC Young1.T1.HPC.Consensus.final/ &
+Rscript prepare_redeemr_trim_test.r young1_HSC Young1.T1.HSC.Consensus.final/ &
+Rscript prepare_redeemr_trim_test.r young2_BMMC Young2.BMMC.Consensus.final/ &
+Rscript prepare_redeemr_trim_test.r young2_HPC Young2.HPC.Consensus.final/ &
+Rscript prepare_redeemr_trim_test.r young2_HSC Young2.HSC.Consensus.final/ &
+Rscript prepare_redeemr_trim_test.r Old1_BMMC Old1.BMMC.Consensus.final/ &
+Rscript prepare_redeemr_trim_test.r Old1_HSPC Old1.HSPC.Consensus.final/ &
+Rscript prepare_redeemr_trim_test.r Old2_BMMC Old2.BMMC.Consensus.final/ &
+Rscript prepare_redeemr_trim_test.r Old2_HSPC Old2.HSPC.Consensus.final/ &
+
+## 2024-8-11 To process the combined BMMMC and HPC
+Rscript process_BMMC_HPC.r Young1.T1.BMMC.Consensus.final Young1.T1.HPC.Consensus.final Young1_BMMC_HSPC &
+Rscript process_BMMC_HPC.r Young2.BMMC.Consensus.final Young2.HPC.Consensus.final Young2_BMMC_HSPC &
+Rscript process_BMMC_HPC.r Old1.BMMC.Consensus.final Old1.HSPC.Consensus.final Old1_BMMC_HSPC &
+Rscript process_BMMC_HPC.r Old2.BMMC.Consensus.final Old2.HSPC.Consensus.final Old2_BMMC_HSPC &
+
+
+## 2024-8-13 run tree making script
+cp /lab/solexa_weissman/cweng/Projects/Collaborator/Caleb/trees/distance/maketree.r  ./
+dir=../output/trees/
+for rds in `ls $dir | grep rds`
+do
+	Rscript maketree.r $dir/$rds $dir/${rds/.rds/.njtree.rds} &
+done

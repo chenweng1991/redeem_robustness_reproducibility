@@ -1,0 +1,11 @@
+## Big rds files
+
+data/
+output/
+
+##
+plots/
+
+##
+notebooks/working/
+notebooks/notebooe_share/log
