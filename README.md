@@ -2,7 +2,7 @@
 Reproducibility related to our recent work of redeem robustness
 link:
 ## Notes
-- [Note00.consensus_validation.ipynb](https://github.com/chenweng1991/redeem_robustness_reproducibility/blob/master/notebooks/notebooe_share/00.consensus_validation.ipynb)
+- [00.consensus_validation.ipynb](https://github.com/chenweng1991/redeem_robustness_reproducibility/blob/master/notebooks/notebooe_share/00.consensus_validation.ipynb)
 - [01.benchmark_edge_effect.ipynb](https://github.com/chenweng1991/redeem_robustness_reproducibility/blob/master/notebooks/notebooe_share/01.benchmark_edge_effect.ipynb)
 - [02.Redeem_filter2_benchmark.ipynb](https://github.com/chenweng1991/redeem_robustness_reproducibility/blob/master/notebooks/notebooe_share/02.Redeem_filter2_benchmark.ipynb)
 - [03.1mol_error_rate_estimate.ipynb](https://github.com/chenweng1991/redeem_robustness_reproducibility/blob/master/notebooks/notebooe_share/03.1mol_error_rate_estimate.ipynb)
@@ -13,7 +13,7 @@ link:
 
   
 ## Data availability
-Raw data are availble [GSE219015](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE219015)
+Raw data are availble [GSE219015](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE219015)</br>
 Processed data are available at Figshare https://doi.org/10.6084/m9.figshare.24418966.v1
 ## Software availability
 - [redeemV](https://github.com/chenweng1991/redeemV) is set of in-house Bash pipeline and Python scripts for mapping and deep mitochondrial mutation calling. 
