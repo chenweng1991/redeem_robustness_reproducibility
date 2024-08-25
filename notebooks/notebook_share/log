@@ -1,0 +1,8 @@
+cp ../working/04_adhoc_edge_mut.ipynb 00.consensus_validation.ipynb
+cp ../working/benchmark_edge_transversion_ratio.ipynb 01.benchmark_edge_effect.ipynb
+cp ../working/Compare_filter1_filter2_mutationcall.ipynb 02.Redeem_filter2_benchmark.ipynb
+cp ../working/02b_error_rate_estimate_trim5.ipynb 03.1mol_error_rate_estimate.ipynb
+cp ../working/graph_metrics.ipynb 04.network_graph_metrics.ipynb
+cp ../working/05_kp_mouse.ipynb ./05.kp_mouse.ipynb
+cp ../working/06_KNN_celltype_origin.ipynb 06.KNN_celltype_origin.ipynb
+cp ../working/07_nearest_neighbor_tree.ipynb 07.nearest_neighbor_tree.ipynb
