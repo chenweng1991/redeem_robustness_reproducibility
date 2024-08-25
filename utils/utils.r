@@ -11,7 +11,7 @@ library(ape)
 #' @param homosets the homoplasmic mutation set
 #' @param hotcall make sure hotcall mutations are not included
 #' @export
-run_redeem_qc <- function(redeem, homosets, hotcall= c("310_T_C","9979_G_A","3109_T_C")){
+run_redeem_qc <- function(redeem, homosets, hotcall= c("310_T_C","309_C_T","3109_T_C", "5764_C_T". "9979_G_A")){
     print("Make sure add_raw_fragment has been run  after clean_redeem")
     require(ggplot2)   
     require(gridExtra)
